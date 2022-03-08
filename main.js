@@ -1,8 +1,7 @@
 import {cityNameUI, searchButton, cityNameInput, temperatureUI, weatherIconUI} from './view.js';
 
-
 let cityName = cityNameInput.value;
-const serverUrl = 'http://api.openweathermap.org/data/2.5/weather';
+const serverUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = 'f660a2fb1e4bad108d6160b7f58c555f';
 let url = `${serverUrl}?q=${cityName}&appid=${apiKey}`;
 let weatherJSON;
@@ -28,7 +27,7 @@ function getWeatherDetails () {
 
         let tempCelci = Math.round(getedResult.main.temp - 273.15);
         const iconCode = getedResult.weather[0].icon;
-        const imgUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+        const imgUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
         cityNameUIArray.forEach(item => item.innerText = getedResult.name);
         temperatureUIArray.forEach(item => item.innerText = tempCelci);
