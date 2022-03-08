@@ -2,8 +2,8 @@ import {cityNameUI, searchButton, cityNameInput, temperatureUI, weatherIconUI} f
 
 let cityName = cityNameInput.value;
 const serverUrl = 'https://api.openweathermap.org/data/2.5/weather';
+const metric = 'units=metric'
 const apiKey = 'f660a2fb1e4bad108d6160b7f58c555f';
-let url = `${serverUrl}?q=${cityName}&appid=${apiKey}`;
 let weatherJSON;
 let getedResult;
 
@@ -14,23 +14,33 @@ searchButton.addEventListener('click', getCityName);
 
 function getCityName() {
     cityName = cityNameInput.value;
-    getWeatherDetails();
+    // console.log(url);
+    getWeatherDetails(cityName);
 }
 
-function getWeatherDetails () {
-    
-    url = `${serverUrl}?q=${cityName}&appid=${apiKey}`;
-    weatherJSON = fetch(url);
-    weatherJSON = weatherJSON
-    .then(response => response.json())
-    .then(json => {getedResult = json;
+function getWeatherDetails (cityName) {
 
-        let tempCelci = Math.round(getedResult.main.temp - 273.15);
+    let url = `${serverUrl}?q=${cityName}&appid=${apiKey}&${metric}`;
+    weatherJSON = fetch(url);
+    weatherJSON
+    .then(response => {
+        if(response.status === 404) {
+            alert('Enter correct city');
+        }
+        else {
+            return response.json();
+        }
+    })
+    .then(json => {
+        
+        getedResult = json;
+        let tempAtCelci = Math.round(getedResult.main.temp);
         const iconCode = getedResult.weather[0].icon;
         const imgUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
         cityNameUIArray.forEach(item => item.innerText = getedResult.name);
-        temperatureUIArray.forEach(item => item.innerText = tempCelci);
+        temperatureUIArray.forEach(item => item.innerText = tempAtCelci);
+        
         weatherIconUI.src = imgUrl;
 
         console.log(getedResult);
