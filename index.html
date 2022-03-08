@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Weather</title>
+</head>
+<body>
+    <section class="container">
+        <div class="weather__wrapper">
+            <div class="search">
+                <form onsubmit="return false" class="d-flex weather__form">
+                    <input type="text" class="inputCity" placeholder="Enter city" value="Kazan">
+                    <button type="submit" class="button search__button">
+                        <img src="img/search.svg" alt="search">
+                    </button>
+                </form>
+            </div>
+            <div class="weather__info d-flex">
+                <div class="weather__details tabs">
+                        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                        <label for="tab-btn-1" class="labelClass">Now</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                        <label for="tab-btn-2">Details</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                        <label for="tab-btn-3">Forecast</label>
+                    <div id="Now" class="weather__now tabs__content">
+                        <div class="temperature">   
+                            <span class="temperature__value">
+                                14
+                            </span>
+                            <span class="degree__symbol">
+                                °
+                            </span>
+                        </div>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" class="weather_icon">
+                        <div class="addToFavority d-flex">
+                            <p class="cityName">
+                                Kazan
+                            </p>
+                            <button class="addToFavorityButton button">
+                                <img src="img/Shape.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div id="Details" class="weather__now tabs__content">
+                        <p class="cityName">
+                            Kazan
+                        </p>
+                        <div class="locationList">
+                            <p class="location__name">
+                                Kazan
+                            </p>
+                            <p class="location__name">
+                                Moscow
+                            </p>
+                            <p class="location__name">
+                                Irkutsk
+                            </p>
+                            <p class="location__name">
+                                Kazan
+                            </p>
+                            <p class="location__name">
+                                Moscow
+                            </p>
+                        </div>   
+                    </div>
+                    <div id="Forecast" class="weather__now tabs__content">
+                        <p class="cityName">
+                            Aktobe
+                        </p>
+                        <ul class="forecast__list">
+                            <li class="forecast__item">
+                                <div class="forecast__day d-flex">
+                                    <p class="day">
+                                        17 May
+                                    </p>
+                                    <p class="time">
+                                        10:00
+                                    </p>
+                                </div>
+                                <div class="forecast__temperature d-flex">
+                                    <div class="temperature__item">
+                                        <span class="forecast__temperature_title">
+                                            Temperature
+                                        </span>
+                                        <span class="forecast__temperature_date">
+                                            13°
+                                        </span>
+                                    </div>
+                                    <p class="forecast__temperature__state">
+                                        Rain
+                                    </p>
+                                </div>
+                                <div class="forecast__feels_like d-flex">
+                                    <div class="temperature__item">
+                                        <span class="forecast__temperature_title">
+                                            Feels Like
+                                        </span>
+                                        <span class="forecast__temperature_date">
+                                            13°
+                                        </span>
+                                    </div>
+                                    <p class="forecast__temperature__img">
+                                        Rain
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="added__locations">
+                    <p class="added_Title">
+                        Added Locations:
+                    </p>
+                    <div class="locationList">
+                        <p class="location__name">
+                            Kazan
+                        </p>
+                        <p class="location__name">
+                            Moscow
+                        </p>
+                        <p class="location__name">
+                            Irkutsk
+                        </p>
+                        <p class="location__name">
+                            Kazan
+                        </p>
+                        <p class="location__name">
+                            Moscow
+                        </p>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>
