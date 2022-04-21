@@ -95,6 +95,11 @@ input {
     padding-top: 13px;
 }
 
+.temperature__Details {
+    font-size: 25px;
+    align-items: center;
+}
+
 .degree__symbol {
     margin-left: -15px;
 }
@@ -121,6 +126,28 @@ input {
 
 .weather__details {
     width: 50%;
+}
+
+.favoriteCity {
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+.labelWidth {
+    width: 100%;
+}
+
+.favoriteCityChecked {
+    background: gainsboro;
+}
+
+.removeCity {
+    padding: 10px;
 }
 
 /* 
@@ -215,4 +242,30 @@ input {
     margin-top: 20px;
     padding-left: 20px;
     margin-bottom: 20px;
+}
+
+.forecast__list {
+    list-style-type: none;
+}
+
+.forecast__item {
+    border: solid 2px;
+    padding: 2px 3px;
+    margin-bottom: 5px;
+}
+
+.temperature__item {
+    justify-content: space-between;
+    margin-left: 0;
+}
+
+.forecast__day {
+    justify-content: space-between;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.forecast__feels_like {
+    justify-content: space-between;
+    align-items: center;
 }

@@ -37,7 +37,7 @@
                         </div>
                         <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" class="weather_icon">
                         <div class="addToFavority d-flex">
-                            <p class="cityName">
+                            <p class="cityName current__city">
                                 Kazan
                             </p>
                             <button class="addToFavorityButton button">
@@ -50,93 +50,73 @@
                             Kazan
                         </p>
                         <div class="locationList">
-                            <p class="location__name">
-                                Kazan
-                            </p>
-                            <p class="location__name">
-                                Moscow
-                            </p>
-                            <p class="location__name">
-                                Irkutsk
-                            </p>
-                            <p class="location__name">
-                                Kazan
-                            </p>
-                            <p class="location__name">
-                                Moscow
-                            </p>
+                            <div class="temperature d-flex temperature__Details">
+                                <p class="location__name">
+                                    Temperature: 
+                                </p>   
+                                <span class="temperature__value">
+                                    14
+                                </span>
+                                <span class="">
+                                    °
+                                </span>
+                            </div>
+                            <div class="temperature d-flex temperature__Details">
+                                <p class="location__name">
+                                    Feels Like: 
+                                </p>   
+                                <span class="feelsLike__value">
+                                    14
+                                </span>
+                                <span class="">
+                                    °
+                                </span>
+                            </div>
+                            <div class="temperature d-flex temperature__Details">
+                                <p class="location__name">
+                                    Weather: 
+                                </p>   
+                                <span class="weather__status">
+                                    Clouds
+                                </span>
+                            </div>
+                            <div class="temperature d-flex temperature__Details">
+                                <p class="location__name">
+                                    Sunrise: 
+                                </p>   
+                                <span class="sunrise__time">
+                                    03:25
+                                </span>
+                            </div>
+                            <div class="temperature d-flex temperature__Details">
+                                <p class="location__name">
+                                    Sunset: 
+                                </p>   
+                                <span class="sunset__time">
+                                    19:27
+                                </span>
+                            </div>
                         </div>   
                     </div>
-                    <div id="Forecast" class="weather__now tabs__content">
-                        <p class="cityName">
+                    <div id="Forecast" class="weather__now tabs__content locationList">
+                        <p class="cityName forecastCityName">
                             Aktobe
                         </p>
-                        <ul class="forecast__list">
-                            <li class="forecast__item">
-                                <div class="forecast__day d-flex">
-                                    <p class="day">
-                                        17 May
-                                    </p>
-                                    <p class="time">
-                                        10:00
-                                    </p>
-                                </div>
-                                <div class="forecast__temperature d-flex">
-                                    <div class="temperature__item">
-                                        <span class="forecast__temperature_title">
-                                            Temperature
-                                        </span>
-                                        <span class="forecast__temperature_date">
-                                            13°
-                                        </span>
-                                    </div>
-                                    <p class="forecast__temperature__state">
-                                        Rain
-                                    </p>
-                                </div>
-                                <div class="forecast__feels_like d-flex">
-                                    <div class="temperature__item">
-                                        <span class="forecast__temperature_title">
-                                            Feels Like
-                                        </span>
-                                        <span class="forecast__temperature_date">
-                                            13°
-                                        </span>
-                                    </div>
-                                    <p class="forecast__temperature__img">
-                                        Rain
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
+                        <ul class="forecast__list"></ul>
                     </div>
                 </div>
                 <div class="added__locations">
                     <p class="added_Title">
                         Added Locations:
                     </p>
-                    <div class="locationList">
-                        <p class="location__name">
-                            Kazan
-                        </p>
-                        <p class="location__name">
-                            Moscow
-                        </p>
-                        <p class="location__name">
-                            Irkutsk
-                        </p>
-                        <p class="location__name">
-                            Kazan
-                        </p>
-                        <p class="location__name">
-                            Moscow
-                        </p>
+                    <div class="locationList favorite__List">
+                        
                     </div>   
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="main.js" type="module"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
